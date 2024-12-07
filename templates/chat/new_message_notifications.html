@@ -1,0 +1,15 @@
+<h2>New Messages</h2>
+
+  {% if unread_notifications %}
+    <ul>
+      {% for message in unread_notifications %}
+        <li>
+          <p><strong>New message from:</strong> {{ message.user.username }}</p>
+          <p><strong>Message:</strong> {{ message.message }}</p>
+          <p><a href="{% url 'view_chat' thread_id=message.thread.id %}">Go to Chat</a></p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No new messages.</p>
+  {% endif %}
