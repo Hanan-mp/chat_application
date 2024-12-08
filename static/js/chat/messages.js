@@ -1,7 +1,6 @@
 $(document).ready(function() {
     let send_message_form = $('#send-message-form');
     let input_message = $('.input-message');
-    let image = $('.profile-pic').attr('src');
     const USER_ID = $('#logged-in-user').val();
 
     // Setup WebSocket
@@ -59,7 +58,7 @@ $(document).ready(function() {
         let messageElement = `
             <div class="chat-msg ${messageClass}">
                 <div class="chat-msg-profile">
-                    <img class="chat-msg-img" src="${image}" alt="">
+                    <img class="chat-msg-img" src="static/images/no-profile.jpeg" alt="">
                     <div class="chat-msg-date"></div>
                 </div>
                 <div class="chat-msg-content">
