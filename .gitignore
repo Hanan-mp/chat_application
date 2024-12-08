@@ -1,0 +1,4 @@
+env/
+django_project/__pycache__/
+chat_application/__pycache__/
+chat_application/migrations/__pycache__/
